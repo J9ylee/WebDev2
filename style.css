@@ -1,141 +1,164 @@
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
 html, body {
-    font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
-background-color: rgb(147, 187, 201);
-    color: black;
-    a:hover {
-        color: red;
-        
-        }
-         
-	margin:0px;
-	padding:0px;
-	height:100%;
-
-
+    font-family: "Montserrat", sans-serif; /* Ensure the font family is sans-serif for better legibility */
+    background-color: rgb(147, 187, 201); /* A calming background color */
+    color: black; 
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: inherit; /* Default color for links, but changes on hover */
+}
+
+a:hover {
+    color: #e60000; /* Subtle red color for links on hover */
+}
+
+/* Ensures images are responsive */
 img {
     width: 100%;
     max-width: 300px;
-  } 
-
-
-header {
-
-background-color: cadetblue;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center images */
 }
-footer {
 
+/* Header and Footer Styles */
+header, footer {
     background-color: cadetblue;
-    }
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1, footer h2 {
+    margin: 0;
+}
+
+footer h2 {
+    font-size: 1.2rem;
+}
+
+/* Navigation Styles */
 nav ul {
     list-style: none;
-    padding-left: 0px;
-}
-html {
-		/* Standard text-settings below */
-	font-size: 1em;
-    line-height: 1.4em;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
+nav ul li a {
+    color: black;
+    font-weight: bold;
+}
 
+nav ul li a:hover {
+    color: #e60000;
+}
 
-
-/* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
-
+/* General Page Layout and Spacing */
 body {
-	
-padding: 1rem;
-	
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
+/* Section and Content Styling */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+/* Improved typography settings */
+html {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Containers and Sectioning */
 #container {
-	
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-
-
-
-
-
-
-/* Class for making YouTube/Vimeo videos responsive */
-
+/* Responsive YouTube/Vimeo embed */
 figure.responsive {
     position: relative;
-    padding-bottom: 56.25%;  /* 16:9 */
-    height: 0px;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
     overflow: hidden;
     max-width: 100%;
+    margin: 20px 0;
 }
 
 figure.responsive iframe {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
-
-
 
 /* A better looking default horizontal rule */
 hr {
     display: block;
     height: 1px;
-    border: 0px;
+    border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0px;
-    padding: 0px;
+    margin: 1em 0;
+    padding: 0;
 }
 
+/* ============================
+MEDIA QUERIES (Responsive Design)
+============================ */
 
+/* Mobile First (Default styles are mobile first) */
 
-/* ========================================
-MEDIA QUERIES!
-You can adjust the min-width numbers below, and add as many new media queries as you need.
-======================================== */
-
-/* Minimum width for portrait tablets and large phone screens.  */
+/* Minimum width for portrait tablets and large phone screens. */
 @media all and (min-width: 600px) {
-	
-	
-	
-	
-} /* closes 600px+ */
+    body {
+        padding: 1.5rem;
+    }
+    main {
+        padding: 25px;
+    }
+}
 
-
-
-/* Minimum width for landscape laptops. */
+/* Minimum width for landscape tablets and laptops */
 @media all and (min-width: 768px) {
-	
-	
-	
-	
-} /* closes 768px+ */
+    nav ul {
+        gap: 30px;
+    }
 
+    main {
+        padding: 30px;
+    }
+}
 
-
-/* Minimum width for larger tablets, laptops and desktops. */
+/* Minimum width for larger tablets, laptops, and desktops */
 @media all and (min-width: 992px) {
-	
-	
-	
-	
-} /* closes 992px+ */
+    main {
+        max-width: 950px;
+    }
+}
 
-
-
-/* Minimum width for larger desktops. */
+/* Minimum width for larger desktops */
 @media all and (min-width: 1200px) {
-	
-	
-	
-	
-} /* closes 1200px+ */
+    header h1 {
+        font-size: 2.5rem;
+    }
 
-
-
+    main {
+        max-width: 1200px;
+        padding: 40px;
+    }
+}
