@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jellyfish Fear</title>
+    <link rel="stylesheet" href="a5.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('custom-font.woff2') format('woff2');
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #004d40;
+            text-align: center;
+            transition: all 0.5s ease;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            background-color: #00796b;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+
+        .dark-mode {
+            background-color: #1b1b1b;
+            color: #ff1744;
+            font-family: 'CustomFont', sans-serif;
+        }
+
+        .dark-mode h1 {
+            color: #ff8a80;
+        }
+
+        .dark-mode button {
+            background-color: #ff1744;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('#transform').click(function() {
+                $('body').toggleClass('dark-mode');
+                $('#title').text(function(_, text) {
+                    return text === 'The Beauty and Terror of the Ocean' ? 'The Ocean is Watching' : 'The Beauty and Terror of the Ocean';
+                });
+                $('#description').html(function(_, text) {
+                    return text.includes('The ocean has always been one of my biggest fears') ? 
+                        "The ocean is a dark abyss, hiding creatures beyond our understanding. The moment you step into its waters, you are no longer in control. Shadows move beneath the surface, watching, waiting. The jellyfish, the sharks, they are just the beginning. The deep calls, and it does not let go." :
+                        "The ocean has always been one of my biggest fears. There’s something unsettling about its vastness, the unknown lurking beneath the surface, and the creatures that inhabit it. My fear is rooted in the possibility of encountering dangerous marine life—sharks, jellyfish, and other unpredictable sea creatures. The thought of being stung, bitten, or simply lost in the deep terrifies me. Because of this, I have only stepped into the ocean once, and even then, I stayed ankle-deep, unwilling to go any further. The shifting sand under my feet and the waves brushing against my legs were enough to remind me of the overwhelming power of the sea. Despite this fear, I have always been fascinated by marine life. I love watching documentaries, learning about different species, and visiting aquariums where I can admire these creatures safely behind glass. Seeing jellyfish, like the ones in the photo I took at the Toronto aquarium, is mesmerizing. Their delicate, flowing movements are hypnotic, yet I know that encountering one in the wild would trigger my fear. While I may never feel fully comfortable in the ocean, I still appreciate its beauty—from a safe distance.";
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1 id="title">The Beauty and Terror of the Ocean</h1>
+        <img id="main-image" src="Jellyfish.jpg" alt="Jellyfish at Toronto Aquarium">
+        <p id="description">The ocean has always been one of my biggest fears. There’s something unsettling about its vastness, the unknown lurking beneath the surface, and the creatures that inhabit it. My fear is rooted in the possibility of encountering dangerous marine life—sharks, jellyfish, and other unpredictable sea creatures. The thought of being stung, bitten, or simply lost in the deep terrifies me. Because of this, I have only stepped into the ocean once, and even then, I stayed ankle-deep, unwilling to go any further. The shifting sand under my feet and the waves brushing against my legs were enough to remind me of the overwhelming power of the sea. Despite this fear, I have always been fascinated by marine life. I love watching documentaries, learning about different species, and visiting aquariums where I can admire these creatures safely behind glass. Seeing jellyfish, like the ones in the photo I took at the Toronto aquarium, is mesmerizing. Their delicate, flowing movements are hypnotic, yet I know that encountering one in the wild would trigger my fear. While I may never feel fully comfortable in the ocean, I still appreciate its beauty—from a safe distance.</p>
+        <button id="transform">Change the Atmosphere</button>
+    </div>
+</body>
+</html>

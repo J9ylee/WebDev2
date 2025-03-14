@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('custom-font.woff2') format('woff2');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    color: #004d40;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease;
+}
+
+#container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2em;
+    transition: color 0.5s ease;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40;
+    transform: scale(1.1);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1b1b1b;
+    color: #ff1744;
+    font-family: 'CustomFont', sans-serif;
+}
+
+.dark-mode #container {
+    background: #2c2c2c;
+    box-shadow: 0px 4px 10px rgba(255, 23, 68, 0.2);
+}
+
+.dark-mode h1 {
+    color: #ff8a80;
+}
+
+.dark-mode img {
+    transform: scale(1.1);
+    filter: grayscale(80%);
+}
+
+.dark-mode button {
+    background-color: #ff1744;
+    color: black;
+}
+
+.dark-mode button:hover {
+    background-color: #d50000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
