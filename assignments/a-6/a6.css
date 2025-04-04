@@ -1,10 +1,11 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100%; /* Ensure the body takes full height */
     font-family: 'Poppins', sans-serif;
     background-color: #fce4ec; /* Light pastel pink */
     color: #555;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 html {
@@ -25,7 +26,7 @@ body a {
 
 /* Main container */
 #container {
-    height: 100%;
+    min-height: 100vh; /* Ensures the container takes full viewport height */
     max-width: 900px;
     margin: auto;
     padding: 20px;
@@ -33,6 +34,9 @@ body a {
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
     padding-top: 100px; /* Space for fixed header */
+    box-sizing: border-box; /* Ensure padding doesn’t affect total height */
+    position: relative;
+    z-index: 10;
 }
 
 /* Header */
