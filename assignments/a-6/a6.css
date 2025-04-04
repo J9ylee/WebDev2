@@ -1,123 +1,132 @@
-
 html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	font-family: 'Poppins', sans-serif;
-	background-color: #fce4ec; /* Light pastel pink */
-	color: #555;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fce4ec; /* Light pastel pink */
+    color: #555;
 }
 
 html {
-	font-size: 1em;
-	line-height: 1.6em;
+    font-size: 1em;
+    line-height: 1.6em;
 }
 
 /* Links */
 body a {
-	text-decoration: none;
-	color: #ff85a2;
-	transition: 0.3s;
+    text-decoration: none;
+    color: #ff85a2;
+    transition: 0.3s;
 }
 
 .menu-buttons a:hover {
-	color: #d6336c;
+    color: #d6336c;
 }
 
 /* Main container */
 #container {
-	height: 100%;
-	max-width: 900px;
-	margin: auto;
-	padding: 20px;
-	background: white;
-	border-radius: 20px;
-	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Header */
 header {
-	display: flex;
-	justify-content: space-between;
-	align-items: baseline;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background: #ffb6c1;
-	padding: 20px;
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffb6c1;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+header h1, header h2 {
+    color: white;
 }
 
 header h1 {
-	font-size: 2rem;
-	color: white;
+    font-size: 2rem;
+}
+
+header h2 {
+    font-size: 1.2rem;
 }
 
 header a:hover {
-	color: #ff3366;
+    color: #ff3366;
 }
 
 /* Footer */
 footer {
-	background-color: #ffb6c1;
-	color: white;
-	text-align: center;
-	padding: 10px;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
-	margin-top: 20px;
+    background-color: #ffb6c1;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 20px;
 }
 
 /* Parallax Sections */
 .parallax {
-	height: 300px;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center;
-	border-radius: 20px;
-	margin: 20px 0;
+    height: 400px; /* Adjusted height */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    border-radius: 20px;
+    margin: 20px 0;
 }
 
 /* Custom Parallax Backgrounds */
 .parallax1 {
-	background-image: url('cute1.jpg'); /* Change this to a cute-themed image */
+    background-image: url('image1.jpg'); /* Replace with your image */
 }
 
 .parallax2 {
-	background-image: url('cute2.jpg'); /* Another cute-themed image */
+    background-image: url('image2.jpg'); /* Replace with your image */
 }
 
 /* Paragraph Styling */
 p {
-	font-size: 1.1em;
-	line-height: 1.8;
-	padding: 15px;
-	background: #fff0f6;
-	border-radius: 10px;
-	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
-	margin: 15px;
-	opacity: 0;
-	transform: translateY(20px);
-	transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    font-size: 1.1em;
+    line-height: 1.8;
+    padding: 15px;
+    background: #fff0f6;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+    margin: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
 /* Scrolling Animations */
 .scroll-active {
-	opacity: 1;
-	transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Responsive Layout */
-@media (max-width: 992px) {
-	#container {
-		max-width: 100%;
-		padding: 15px;
-	}
+@media (min-width: 992px) {
+    #container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-	p {
-		font-size: 1em;
-	}
+    p {
+        font-size: 1.2em;
+        line-height: 1.8;
+    }
 }
