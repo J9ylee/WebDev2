@@ -32,6 +32,7 @@ body a {
     background: white;
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    padding-top: 100px; /* Space for fixed header */
 }
 
 /* Header */
@@ -86,15 +87,16 @@ footer {
     background-position: center;
     border-radius: 20px;
     margin: 20px 0;
+    display: block;
 }
 
 /* Custom Parallax Backgrounds */
 .parallax1 {
-    background-image: url('image1.jpg'); /* Replace with your image */
+    background-image: url('cute1.jpg'); /* Replace with your image */
 }
 
 .parallax2 {
-    background-image: url('image2.jpg'); /* Replace with your image */
+    background-image: url('cute2.jpg'); /* Replace with your image */
 }
 
 /* Paragraph Styling */
