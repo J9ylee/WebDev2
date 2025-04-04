@@ -1,45 +1,12 @@
 html, body {
     margin: 0;
     padding: 0;
-    min-height: 100%; /* Ensure the body takes full height */
     font-family: 'Poppins', sans-serif;
-    background-color: #fce4ec; /* Light pastel pink */
+    background-color: #fce4ec;
     color: #555;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
-html {
-    font-size: 1em;
-    line-height: 1.6em;
-}
-
-/* Links */
-body a {
-    text-decoration: none;
-    color: #ff85a2;
-    transition: 0.3s;
-}
-
-.menu-buttons a:hover {
-    color: #d6336c;
-}
-
-/* Main container */
-#container {
-    min-height: 100vh; /* Ensures the container takes full viewport height */
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-    padding-top: 100px; /* Space for fixed header */
-    box-sizing: border-box; /* Ensure padding doesn’t affect total height */
-    position: relative;
-    z-index: 10;
-}
-
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -68,11 +35,6 @@ header h2 {
     font-size: 1.2rem;
 }
 
-header a:hover {
-    color: #ff3366;
-}
-
-/* Footer */
 footer {
     background-color: #ffb6c1;
     color: white;
@@ -83,27 +45,37 @@ footer {
     margin-top: 20px;
 }
 
-/* Parallax Sections */
+/* Parallax Effect */
 .parallax {
-    height: 400px; /* Adjusted height */
+    height: 400px;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     border-radius: 20px;
     margin: 20px 0;
-    display: block;
 }
 
-/* Custom Parallax Backgrounds */
 .parallax1 {
-    background-image: url('cute1.jpg'); /* Replace with your image */
+    background-image: url('cute1.jpg');
 }
 
 .parallax2 {
-    background-image: url('cute2.jpg'); /* Replace with your image */
+    background-image: url('cute2.jpg');
 }
 
-/* Paragraph Styling */
+/* Main Content */
+#container {
+    min-height: 100vh;
+    padding: 100px 20px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.content {
+    margin-bottom: 40px;
+}
+
 p {
     font-size: 1.1em;
     line-height: 1.8;
@@ -117,18 +89,12 @@ p {
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
-/* Scrolling Animations */
-.scroll-active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Responsive Layout */
 @media (min-width: 992px) {
     #container {
+        padding: 100px 20px 20px;
         max-width: 900px;
         margin: 0 auto;
-        padding: 20px;
     }
 
     p {
