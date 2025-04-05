@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cambodian New Year Celebration</title>
+  
+    <!-- Khmer font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khmer&display=swap" rel="stylesheet">
+  
+    <!-- Your stylesheet -->
+    <link rel="stylesheet" href="a6.css"> 
+  </head>
+  
+
+<body>
+  <div id="container">
+
+<header>
+  <a id="logo" href="#">Khmer Pride</a>
+ 
+</header>
+
+<!-- image one div -->
+<div id="image1">
+  <h1>Chaul Chnam Thmey: A Joyful Khmer Tradition</h1>
+</div> 
+
+<section id="one">
+  <p id="p1"><b>A Celebration of Renewal:</b> Cambodian New Year, or Chaul Chnam Thmey, isn't just a time of festivities—it's a heartfelt tradition that brings communities together. For Cambodian families, this three-day event is filled with vibrant culture, spiritual reflection, and joyful connection.</p>
+  <p id="p2">Marking the transition from the old year to the new, this holiday symbolizes renewal and gratitude. Across Cambodia and in Khmer communities worldwide, people come together to honor ancestors, make offerings at temples, cleanse their spirits with water blessings, and celebrate with dance, games, and traditional cuisine. It's a time to reconnect—with our roots, with each other, and with the hopes of the coming year.</p>
+</section>
+
+<!-- image two div -->
+<div id="image2"></div>
+<section id="two">
+  <p><b>Three Days of Cultural Richness:</b></p>
+  <p><b>Day 1 - Moha Sangkran:</b> Welcoming the New Year by cleaning homes and visiting temples to offer prayers and light incense, invoking blessings from the new angel of the year.</p>
+  <p><b>Day 2 - Veareak Vanabat:</b> A day dedicated to kindness and charity—offering gifts to the less fortunate and spending time with family in gratitude and service.</p>
+  <p><b>Day 3 - Vearak Laeung Sak:</b> The day of renewal and blessing. Water plays a key role here—cleansing statues, elders' hands, and symbolizing a fresh start for the year ahead.</p>
+  <p><b>Why it matters:</b> In a globalized world, cultural preservation is more vital than ever. Khmer New Year serves as a bridge between generations and keeps our identity alive.</p>
+</section>
+
+<!-- image three div -->
+<div id="image3"></div>
+<section id="three">
+  <p>Explore and engage:</p>
+  <ul>
+    <li><a href="https://www.cambodianlivingarts.org/">Cambodian Living Arts</a></li>
+    <li><a href="https://www.seaarts.org/">Southeast Asian Arts Alliance</a></li>
+    <li><a href="https://www.khmernewyear.org/">Khmer New Year Org</a></li>
+    <li><a href="https://www.festivalofnationsstl.org/">Festival of Nations</a></li>
+  </ul>
+</section>
+
+<!-- image four div -->
+<div id="image4">
+  <h1>Join us at this year's Khmer New Year Festival—stay tuned for dates and details!</h1>
+</div>
+
+<footer>
+  <p>Images used are original and taken by me. </p>
+  <p>&copy; 2025 Jaylee Lambino</p>
+</footer>
+<a href="#TOP" class="back-to-top">↑</a>
+
+</div><!-- close "container" -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $(window).scroll(function() {
+    var windowPosition = $(window).scrollTop();
+
+    if(windowPosition > 1300){
+      $('section').addClass('red');
+    } else {
+      $('section').removeClass('red');
+    }
+
+    if(windowPosition > 1500){
+      $('h1').addClass('white');
+    } else {
+      $('h1').removeClass('white');
+    }
+
+    if(windowPosition > 1400){
+      $('header, footer').addClass('headerFooterchange');
+    } else {
+      $('header, footer').removeClass('headerFooterchange');
+    }
+
+    if(windowPosition > 1350){
+      $('#image3').addClass('imgChange');
+    } else {
+      $('#image3').removeClass('imgChange');
+    }
+  });
+});
+</script>
+</body>
+</html>

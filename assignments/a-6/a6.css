@@ -1,0 +1,197 @@
+/* Import Khmer-supporting font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Khmer&display=swap');
+
+/* Basic CSS resets */
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: 'Noto Serif Khmer', serif; /* Apply Khmer-supporting font */
+}
+
+html {
+	font-size: 1em;
+	line-height: 1.4em;
+}
+
+body {
+	background: #f9f4ef;
+	color: #2c1e1e;
+}
+
+body a {
+	text-decoration: none;
+	color: #f5e132; /* golden yellow */
+}
+
+.menu-buttons a:hover {
+	color: #d63447; /* vibrant red */
+}
+
+#container {
+	height: 100%;
+}
+
+/* Header and Section styling */
+header, section {
+	background: #5a2a27; /* deep maroon */
+	padding: 25px;
+	color: #fefae0;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: last baseline;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+header a:hover {
+	color: #f7b733;
+}
+
+footer {
+	background-color: #5a2a27;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#logo {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #fefae0;
+}
+
+#p1 {
+	float: right;
+	width: 50%;
+	margin: 5px;
+}
+
+#p2 {
+	width: 50%;
+	margin: 5px;
+}
+
+#three ul a:hover {
+	color: #f7b733;
+}
+
+/* Image sections */
+#image1, #image2, #image3, #image4 {
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#image1 {
+	background: url('img/image1.jpg') no-repeat center fixed;
+}
+
+#image2 {
+	background: url('img/image2.jpg') no-repeat center fixed;
+}
+
+#image3 {
+	background: url('img/image3.jpg') no-repeat center fixed;
+}
+
+#image4 {
+	background: url('img/image4.jpg') no-repeat center fixed;
+	position: relative;
+}
+
+#image1 h1 {
+	color: #fefae0;
+	font-size: 3.5rem;
+	line-height: 110px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#image4 h1 {
+	color: white;
+	font-size: 1.75rem;
+	position: absolute;
+	left: 50%;
+	top: 75%;
+	transform: translateX(-50%);
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	border-radius: 10px;
+}
+
+/* Interactive animations */
+@keyframes changes {
+	from { background: #5a2a27; }
+	to { background: #d63447; }
+}
+.red {
+	animation: changes 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes textChange {
+	from { color: #fefae0; }
+	to { color: #5a2a27; }
+}
+.white {
+	animation: textChange 5s;
+	animation-fill-mode: backwards;
+}
+
+@keyframes headerFooterColorChange {
+	from { background: #5a2a27; }
+	to { background: #d63447; }
+}
+.headerFooterchange {
+	animation: headerFooterColorChange 1.5s forwards;
+}
+
+@keyframes imgChange {
+	from { width: 100%; }
+	to { width: 35%; }
+}
+.imgChange {
+	animation: imgChange 3s alternate;
+	animation-fill-mode: forwards;
+}
+
+/* Horizontal rule style */
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+/* Responsive media queries */
+@media all and (min-width: 768px) {
+	#image1 h1 {
+		font-size: 3rem;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	#image1 h1 {
+		font-size: 4.5rem;
+	}
+
+	#image4 h1 {
+		font-size: 2rem;
+		left: 80%;
+		transform: translateX(-50%);
+	}
+}
