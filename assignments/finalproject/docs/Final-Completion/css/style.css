@@ -1,0 +1,366 @@
+/* 1) Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* 2) Theme variables */
+:root {
+  --purple: #9b59b6;
+  --yellow: #f1c40f;
+  --teal:   #1abc9c;
+  --coral:  #ed6663;
+  --dark:   #2e2e2e;
+  --light:  #f5f0e3;
+  --font:   'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 3) Reset & base */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: var(--font);
+  line-height: 1.6;
+  color: #333;
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 4) Header & nav */
+.site-header {
+  background: var(--dark);
+  color: white;
+  position: relative;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.logo,
+.logo-footer {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.logo-img {
+  height: 32px;
+  margin-right: 0.5rem;
+  width: auto;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+nav a.active,
+nav a:hover {
+  color: var(--coral);
+}
+
+/* 5) Hero sections */
+.hero {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-home      { background-image: url("../images/home-hero.png");    }
+.hero-explore   { background-image: url("../images/explore-hero.png"); }
+.hero-track     { background-image: url("../images/track-hero.png");   }
+.hero-community { background-image: url("../images/community-hero.png"); }
+.hero-about     { background-color: var(--purple); }
+
+/* 6) Section padding */
+.section-explore,
+.intro,
+.how-it-works,
+.testimonial,
+.popular-articles,
+.cta,
+.content {
+  padding: 5rem 0;
+}
+
+/* 7) Intro flex (where used) */
+.intro-home { background: var(--purple); color: #fff; }
+.intro-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.intro-flex figure { flex: 0 0 45%; }
+.intro-flex > div { flex: 0 0 40%; }
+.intro-flex figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 8) Buttons, inputs, upload box */
+.btn-primary {
+  display: inline-block;
+  background: var(--teal);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  margin-top: 1rem;
+}
+.upload-box {
+  display: inline-block;
+  background: var(--light);
+  color: var(--teal);
+  padding: 2rem;
+  border: 4px solid var(--teal);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* 9) Section backgrounds */
+.section-yellow { background: var(--yellow); }
+.section-teal   { background: var(--teal);   color: white; }
+.section-coral  { background: var(--coral);  color: white; }
+.section-purple { background: var(--purple); color: white; }
+
+/* 10) Two-column layout for teal section */
+.section-teal .container.two-col {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.section-teal .col-text {
+  flex: 1 1 300px;
+}
+.section-teal .col-media {
+  flex: 1 1 300px;
+  text-align: center;
+}
+.section-teal .col-media img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.section-teal .caption {
+  font-size: 0.85rem;
+  color: #fafafa;
+  margin: 0.5rem 0 1rem;
+}
+
+/* 11) Learn Hub / Popular Articles grid forced to 2×2 */
+.popular-articles .articles-grid,
+.section-explore .articles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* 12) How-it-works box */
+.how-box {
+  background: var(--teal);
+  padding: 2rem;
+  border-radius: 8px;
+  color: white;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.how-box ol {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+/* 13) Testimonials */
+.testimonial {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+}
+.testimonial blockquote {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* 14) CTA Flex */
+.cta-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.cta-home img {
+  width: 200px;
+  border-radius: 8px;
+}
+
+/* 15) Footer */
+.site-footer {
+  background: var(--dark);
+  color: white;
+  padding: 2rem 0;
+}
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-text {
+  text-align: right;
+}
+.footer-text p {
+  margin: 0;
+}
+.footer-credit {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* 16) Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Intro & CTA stack */
+  .intro-flex,
+  .cta-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro img,
+  .cta-home img {
+    width: 100%;
+  }
+
+  /* Learn Hub / Articles → single column */
+  .popular-articles .articles-grid,
+  .section-explore .articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hamburger menu */
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .nav-toggle .hamburger {
+    width: 25px;
+    height: 3px;
+    background: white;
+    position: relative;
+    display: block;
+  }
+  .nav-toggle .hamburger::before,
+  .nav-toggle .hamburger::after {
+    content: '';
+    width: 25px;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+  }
+  .nav-toggle .hamburger::before { top: -8px; }
+  .nav-toggle .hamburger::after  { top:  8px; }
+
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--dark);
+    padding-top: 4rem;
+    z-index: 999;
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    gap: 2rem;
+    margin: 0;
+    list-style: none;
+  }
+  .nav-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/* Limit article‐card image size */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.article-card {
+  max-width: 550px;    /* each card won’t grow wider than this */
+  margin: 0 auto;      /* center if there’s extra space */
+}
+
+.article-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;  /* optional */
+}
+
+/* Dropzone hover state */
+.upload-box {
+  transition: background 0.2s, border-color 0.2s;
+}
+.upload-box.dragover {
+  background: rgba(255,255,255,0.9);
+  border-color: var(--coral);
+}
+
+img[src*="founder"] {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;  /* keep it from stretching */
+  border-radius: 50%;  /* maintain the circle */
+  display: block;
+  margin: 0 auto;      /* center it */
+}
+
+/* responsive fallback */
+@media (max-width: 767px) {
+  img[src*="founder"] {
+    width: 200px;
+    height: 200px;
+  }
+}
